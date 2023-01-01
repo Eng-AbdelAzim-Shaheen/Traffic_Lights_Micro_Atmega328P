@@ -5,7 +5,7 @@
  * Author : Eng AbdelAzim Shaheen
  */ 
 
-#define F_CPU 1035000UL
+#define F_CPU 8000000UL
 #include <avr/io.h>
 #include <util/delay.h>
 
@@ -38,15 +38,9 @@ void count(int x)
 			PORTB= Seg[y-3];
 			PORTD= Seg[y];
 		}
-		else if (PORTC==(PORTC|(1<<1)) && PORTC==(PORTC|(1<<3)))
+		else
 		{
 			// Y1 R2
-			PORTB= Seg[y];
-			PORTD= Seg[y];
-		}
-		else if (PORTC==(PORTC|(1<<0)) && PORTC==(PORTC|(1<<3)))
-		{
-			// R1 R2
 			PORTB= Seg[y];
 			PORTD= Seg[y];
 		}
